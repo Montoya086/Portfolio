@@ -83,7 +83,7 @@ body{
                         margin-top: 2.5px;
                         margin-bottom: 2.5px;
                         transform: rotateZ(0deg);
-                        transition: background-color 1s ease;
+                        transition: background-color 1s ease, transform .5s ease;
                     }
                     .menu-button-bar.element1.open{
                         transition: transform 1s ease;
@@ -115,6 +115,8 @@ body{
                         background-color: #9ee6fe;
                         transition: background-color 1s ease;
                     }
+                    transform: scale(1.05);
+                    transition: transform .5s ease;
                 }
                 .menu-wrapper{
                     position: fixed;
