@@ -22,8 +22,8 @@ export default function Home() {
               <div className={`menu-button-bar element2 ${isOpen ? "open" : "close"}`}/>
               <div className={`menu-button-bar element3 ${isOpen ? "open" : "close"}`}/>
             </div>
-            <div className='menu-wrapper'>
-            
+            <div className={`menu-wrapper ${isOpen ? "open" : "close"}`}>
+
             </div>
           </div>
         </div>

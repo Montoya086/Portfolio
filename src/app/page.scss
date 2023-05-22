@@ -116,10 +116,28 @@ body{
                         transition: background-color 1s ease;
                     }
                 }
+                .menu-wrapper{
+                    position: fixed;
+                    top: 3.85rem;
+                    z-index: -1;
+                    width: 400px;
+                    right: -50px;
+                    height: 100%;
+                    background-color: black;
+                    visibility: hidden;
+                }
+                .menu-wrapper.open{
+                    visibility: visible;
+                    transform: translateX(-50px);
+                    opacity: 0.6;
+                    transition: opacity 1s ease, transform .8s ease;
+                }
+                .menu-wrapper.close{
+                    opacity: 0;
+                    transform: translateX(50px);
+                    transition: opacity 1s ease, transform .8s ease, visibility 1s;
+                }
             }
         }
-    }
-    .test{
-        height: 1700px;
     }
 }
