@@ -227,6 +227,7 @@ body{
             height: 690px;
             border-bottom: #fff solid 2px;
             overflow: hidden;
+            user-select: none;
             .stars{
                 background: url(http://salehriaz.com/404Page/img/overlay_stars.svg);
                 background-repeat: repeat;
@@ -320,6 +321,7 @@ body{
                     top: -50px;
                     left: 50px;
                     animation: earth 60s linear infinite;
+                    cursor: pointer;
                 }
                 .moon-image{
                     position: absolute;
@@ -345,12 +347,40 @@ body{
                         transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
                     }
                 }
+                .home-text{
+                    color: #fff;
+                    user-select: none;
+                    font-family: "Quicksand";
+                    position: relative;
+                    transform: translate(50px, -60px);
+                    opacity: 0;
+                    transition: opacity .5s ease;
+                }
+                .home-text.shown{
+                    opacity: 1;
+                    transition: opacity .5s ease;
+                }
             }
-            .astronaut-image{
+            .astronaut{
                 position: absolute;
                 top:45%;
                 left:70%;
                 animation: astronaut 40s linear infinite;
+                .astronaut-image{
+                    cursor: pointer;
+                }
+                .astronaut-text{
+                    color: #fff;
+                    font-family: "Quicksand";
+                    position: absolute;
+                    transform: translate(-0px, -250px);
+                    opacity: 0;
+                    transition: opacity .5s ease;
+                }
+                .astronaut-text.shown{
+                    opacity: 1;
+                    transition: opacity .5s ease;
+                }
             }
             @keyframes astronaut {
                 0%{
