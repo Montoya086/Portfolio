@@ -45,6 +45,7 @@ body{
                 margin-top: 10px;
                 cursor: pointer;
                 h4{
+                    white-space: nowrap;
                     color: white;
                     font-size: 30px;
                     font-family: "Quicksand";
@@ -364,7 +365,7 @@ body{
             }
             .astronaut{
                 position: absolute;
-                top:85%;
+                top:75%;
                 left:70%;
                 animation: astronaut 40s linear infinite;
                 .astronaut-image{
