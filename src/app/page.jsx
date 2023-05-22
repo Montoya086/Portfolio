@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import styles from './page.scss'
 import { useState } from 'react'
-import Header from './header'
+import Header from './header.jsx'
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
