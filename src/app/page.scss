@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    background: url(http://salehriaz.com/404Page/img/bg_purple.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: left top;
+    background-color: #23252b;
+}
+.app-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    .header-wrapper{
+        flex: 0 0 3.75rem;
+        min-width: 20rem;
+        position: relative;
+        .header{
+            min-width: 61.25em;
+            align-items: stretch;
+            background-color: transparent;
+            border-bottom: white solid 2px;
+            display: flex;
+            height: 3.75rem;
+            justify-content: space-between;
+            left: 0;
+            min-width: 20rem;
+            position: fixed;
+            right: 0;
+            z-index: 100;
+
+            .header-left{
+                margin-left: 35px;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                transition: all 1s ease;
+                flex-direction: column;
+                margin-top: 10px;
+                cursor: pointer;
+                h4{
+                    color: white;
+                    font-size: 30px;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    text-shadow: 1px 1px 2px #23252b;
+                    margin: 0;
+                    transition: all 1s ease;
+                }
+                .underline{
+                    height: 3px;
+                    background-color: #fff;
+                    width: 0px;
+                    transition: width 2s ease, background-color 2s ease;
+                }
+            }
+            .header-left:hover{
+                h4{
+                    color: #9ee6fe;
+                    transition: all 1s ease;
+                }
+                .underline{
+                    width: 100%;
+                    background-color: #9ee6fe;
+                    transition: width 2s ease, background-color 2s ease;
+                }
+                transform: scale(1.2);
+                transition: all 1s ease;
+            }
+            .header-right{
+                display: flex;
+                margin-right: 45px;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                .menu-button{
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                    .menu-button-bar{
+                        height: 3px;
+                        width: 25px;
+                        background-color: white;
+                        margin-top: 2.5px;
+                        margin-bottom: 2.5px;
+                        transform: rotateZ(0deg);
+                        transition: background-color 1s ease;
+                    }
+                    .menu-button-bar.element1.open{
+                        transition: transform 1s ease;
+                        transform: rotateZ(45deg) translateY(11px);
+                    }
+                    .menu-button-bar.element1.close{
+                        transition: transform 1s ease;
+                        transform: rotateZ(0deg);
+                    }
+                    .menu-button-bar.element2.open{
+                        transition: opacity .5s ease;
+                        opacity: 0;
+                    }
+                    .menu-button-bar.element2.close{
+                        transition: opacity .5s ease;
+                        opacity: 1;
+                    }
+                    .menu-button-bar.element3.open{
+                        transition: transform 1s ease;
+                        transform: rotateZ(-45deg) translateY(-11px);
+                    }
+                    .menu-button-bar.element3.close{
+                        transition: transform 1s ease;
+                        transform: rotateZ(0deg);
+                    }
+                }
+                .menu-button:hover{
+                    .menu-button-bar{
+                        background-color: #9ee6fe;
+                        transition: background-color 1s ease;
+                    }
+                }
+            }
+        }
+    }
+    .test{
+        height: 1700px;
+    }
+}
