@@ -30,7 +30,7 @@ body{
             z-index: 100;
 
             .header-left{
-                margin-left: 35px;
+                margin-left: 55px;
                 display: flex;
                 align-items: center;
                 height: 100%;
@@ -119,7 +119,7 @@ body{
                 .menu-wrapper{
                     position: fixed;
                     top: 3.85rem;
-                    z-index: -1;
+                    z-index: 99;
                     width: 400px;
                     right: -50px;
                     height: 100%;
@@ -138,6 +138,21 @@ body{
                     transition: opacity 1s ease, transform .8s ease, visibility 1s;
                 }
             }
+        }
+    }
+    .body-wrapper{
+        .body-overlay{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 98;
+            visibility: hidden;
+        }
+        .body-overlay.open{
+            visibility: visible;
+            background-color: #23252bcc;
+            opacity: 0.4;
+            filter: brightness(0.4);
         }
     }
 }

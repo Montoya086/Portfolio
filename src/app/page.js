@@ -11,7 +11,7 @@ export default function Home() {
       <div className='header-wrapper'>
         <div className='header'>
           <div className='header-left'>
-            <h4>Andrés Montoya</h4>
+            <h4>Montoya's Portfolio</h4>
             <div className='underline'>
 
             </div>
@@ -28,8 +28,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='test'>
-
+      <div className='body-wrapper'>
+        <div className={`body-overlay ${isOpen ? "open" : "close"}`} onClick={()=>setIsOpen(false)}/>
       </div>
     </div>
   )
