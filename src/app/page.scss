@@ -129,7 +129,7 @@ body{
                     width: 400px;
                     right: -50px;
                     height: 100%;
-                    background-color: rgba(0, 0, 0, 0.571);
+                    background-color: rgba(0, 0, 0, 0.695);
                     visibility: hidden;
                     .item-wrapper{
                         margin: 50px;
@@ -221,6 +221,148 @@ body{
             background-color: #23252bcc;
             opacity: 0.4;
             filter: brightness(0.4);
+        }
+        .home-wrapper{
+            width: 100%;
+            height: 690px;
+            border-bottom: #fff solid 2px;
+            overflow: hidden;
+            .stars{
+                background: url(http://salehriaz.com/404Page/img/overlay_stars.svg);
+                background-repeat: repeat;
+                background-size: contain;
+                background-position: left top;
+                width: 100%;
+                height: 100%;
+                animation: stars 70s linear infinite;
+                position: relative;
+                .shifting-stars .star{
+                    position: absolute;
+                    border-radius: 100%;
+                    background-color: #fff;
+                    width: 3px;
+                    height: 3px;
+                    opacity: 0.3;
+                }
+                .shifting-stars .star:nth-child(1){
+                    top: 80%;
+                    left: 25%;
+                    animation: glow-star 2s infinite ease-in-out alternate 1s;
+                }
+                .shifting-stars .star:nth-child(2){
+                    top: 25%;
+                    left: 25%;
+                    animation: glow-star 2s infinite ease-in-out alternate 3s;
+                }
+                .shifting-stars .star:nth-child(2){
+                    top: 20%;
+                    left: 40%;
+                    animation: glow-star 7s infinite ease-in-out alternate 3s;
+                }
+                .shifting-stars .star:nth-child(3){
+                    top: 25%;
+                    left: 25%;
+                    animation: glow-star 2s infinite ease-in-out alternate 5s;
+                }
+                .shifting-stars .star:nth-child(4){
+                    top: 75%;
+                    left: 80%;
+                    animation: glow-star 4s infinite ease-in-out alternate 7s;
+                }
+                .shifting-stars .star:nth-child(5){
+                    top: 90%;
+                    left: 50%;
+                    animation: glow-star 2s infinite ease-in-out alternate 9s;
+                }
+                .shifting-stars .star:nth-child(6){
+                    top: 40%;
+                    left: 45%;
+                    animation: glow-star 3s infinite ease-in-out alternate 11s;
+                }
+                .shifting-stars .star:nth-child(7){
+                    top: 45%;
+                    left: 60%;
+                    animation: glow-star 2s infinite ease-in-out alternate 13s;
+                }
+                .shifting-stars .star:nth-child(8){
+                    top: 25%;
+                    left: 70%;
+                    animation: glow-star 5s infinite ease-in-out alternate 15s;
+                }
+                @keyframes glow-star {
+                    40%{
+                        opacity: 1;
+                        transform: scale(1.2);
+                    }
+                    100%{
+                        opacity: 0.3;
+                        transform: scale(1);
+                    }
+                }
+            }
+            @keyframes stars {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                50%{
+                    transform: rotateZ(25deg);   
+                }
+                100%{
+                    transform: rotateZ(0deg); 
+                }
+            }
+            .earth-moon{
+                position: absolute;
+                top: 300px;
+                left: 200px;
+                .earth-image{
+                    position: relative;
+                    top: -50px;
+                    left: 50px;
+                    animation: earth 60s linear infinite;
+                }
+                .moon-image{
+                    position: absolute;
+                    animation-name: moon;
+                    animation-duration: 10s;
+                    animation: moon 60s linear infinite;
+                }
+                @keyframes earth {
+                    from{
+                        transform: rotateZ(0deg);
+                    }
+                    to{
+                        transform: rotateZ(360deg);
+                    }
+                }
+                @keyframes moon {
+                    0%{
+                        transform-origin: center center;
+                        transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+                    }
+                    100%{
+                        transform-origin: center center;
+                        transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
+                    }
+                }
+            }
+            .astronaut-image{
+                position: absolute;
+                top:45%;
+                left:70%;
+                animation: astronaut 40s linear infinite;
+            }
+            @keyframes astronaut {
+                0%{
+                    transform: translate(-50%, -50%) rotate(0deg) translateX(0px) translateY(0px);
+                }
+                50%{
+                    transform: translate(-50%, -50%) rotate(-45deg) translateX(150px) translateY(-150px);
+                }
+                100%{
+                    transform: translate(-50%, -50%) rotate(0deg) translateX(0px) translateY(0px);
+                }
+            }
         }
     }
 }
