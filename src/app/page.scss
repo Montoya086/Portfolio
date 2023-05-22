@@ -151,9 +151,9 @@ body{
                             }
                         }
                         .menu-item:hover{
-                            transform: scale(1.1) translateX(20px);
-                            transition: transform .5s ease;
                             h4{
+                                transform: scale(1.1) translateX(15px);
+                                transition: transform .5s ease;
                                 color: #9ee6fe;
                             }
                             .underline{
