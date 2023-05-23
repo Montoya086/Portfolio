@@ -14,25 +14,27 @@ export default function Aboutsection() {
         observer.observe(sectionRef.current)
     },[])
     return(
-        <div ref={sectionRef} className={`about-wrapper ${isSectionVisible ? 'visible' : ''}`}>
-            <div className="about-title-wrapper">
-                <div className="about-title">
-                    <h4>About Me, Myself and I</h4>
-                    <div className="underline"/>
+        <div className="about-section">
+            <div ref={sectionRef} className={`about-wrapper ${isSectionVisible ? 'visible' : ''}`}>
+                <div className="about-title-wrapper">
+                    <div className="about-title">
+                        <h4>About Me, Myself and I</h4>
+                        <div className="underline"/>
+                    </div>
                 </div>
-            </div>
-            <div className="card-area">
-                <div className='card-wrapper'>
-                    <div className="card-left">
+                <div className="card-area">
+                    <div className='card-wrapper'>
+                        <div className="card-left">
+
+                        </div>
+                        <div className="card-right">
+
+                        </div>
 
                     </div>
-                    <div className="card-right">
-
-                    </div>
-
                 </div>
-            </div>
 
+            </div>
         </div>
     )
 }

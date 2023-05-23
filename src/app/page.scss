@@ -1,3 +1,50 @@
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+@media (max-width: $small-screen){
+    .about-title{
+        font-size: 20px;
+    }
+    .header-left{
+        margin-top: 17px;
+        h4{
+            font-size: 20px;
+        }
+    }
+}
+@media (min-width: $small-screen) and (max-width: $medium-screen){
+    .about-title{
+        font-size: 20px;
+    }
+    .header-left{
+        margin-top: 15px;
+        h4{
+            font-size: 20px;
+        }
+    }
+}
+@media (min-width: $medium-screen) and (max-width: $large-screen){
+    .about-title{
+        font-size: 35px;
+    }
+    .header-left{
+        margin-top: 13px;
+        h4{
+            font-size: 25px;
+        }
+    }
+}
+@media (min-width: $large-screen){
+    .about-title{
+        font-size: 50px;
+    }
+    .header-left{
+        margin-top: 10px;
+        h4{
+            font-size: 30px;
+        }
+    }
+}
 body{
     margin: 0;
     background: url(http://salehriaz.com/404Page/img/bg_purple.png);
@@ -42,12 +89,10 @@ body{
                 height: 100%;
                 transition: all 1s ease;
                 flex-direction: column;
-                margin-top: 10px;
                 cursor: pointer;
                 h4{
                     white-space: nowrap;
                     color: white;
-                    font-size: 30px;
                     font-family: "Quicksand";
                     text-shadow: 1px 1px 2px #23252b;
                     margin: 0;
@@ -147,7 +192,7 @@ body{
                             h4{
                                 color: #fff;
                                 font-family: "Quicksand";
-                                font-size: 30px;
+                                
                                 margin: 0;
                             }
                             .underline{
@@ -396,72 +441,80 @@ body{
             }
         }
         .section-divider{
-            height: 20px;
+            height: 40px;
             width: 100%;
         }
-        .about-wrapper{
-            width: 90%;
-            background-color: #0000005b;
-            border-radius: 5px;
-            margin: 5%;
-            opacity: 1;
+        .about-section{
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            opacity: 0;
-            transition: opacity 1s ease;
-            .card-area{
-                width: 100%;
+            justify-content: center;
+            .about-wrapper{
+                width: 90%;
+                background-color: #0000005b;
+                border-radius: 5px;
+                margin: 5%;
+                opacity: 1;
                 display: flex;
-                justify-content: center;
-                .card-wrapper{
-                    width: 80%;
-                    margin-top: 50px;
-                    margin-bottom: 50px;
-                    display: grid;
-                    grid-template-columns: repeat(4, 22%);
-                    grid-template-rows: 40%;
-                    grid-column-gap: 3%;
-                    grid-row-gap: 0;
-                    .card-left{
-                        grid-row: 1;
-                        grid-column-start: span 2;
-                        min-height: 300px;
-                        background-color: #fff;
-                        opacity: 0;
-                        transform: translateX(-100px);
-                        border-radius: 5px;
-                    }
-                    .card-right{
-                        grid-column: 3/5;
-                        grid-row: 2;
-                        min-height: 300px;
-                        background-color: #fff;
-                        opacity: 0;
-                        transform: translateX(100px);
-                        border-radius: 5px;
+                flex-direction: column;
+                opacity: 0;
+                transition: opacity 1s ease;
+                .card-area{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    .card-wrapper{
+                        width: 80%;
+                        margin-top: 50px;
+                        margin-bottom: 50px;
+                        display: grid;
+                        grid-template-columns: repeat(4, 22%);
+                        grid-template-rows: 40%;
+                        grid-column-gap: 3%;
+                        grid-row-gap: 0;
+                        .card-left{
+                            grid-row: 1;
+                            grid-column-start: span 2;
+                            min-height: 300px;
+                            max-height: fit-content;
+                            background-color: #fff;
+                            opacity: 0;
+                            transform: translateX(-100px);
+                            border-radius: 5px;
+                        }
+                        .card-right{
+                            grid-column: 3/5;
+                            grid-row: 2;
+                            min-height: 300px;
+                            max-height: fit-content;
+                            background-color: #fff;
+                            opacity: 0;
+                            transform: translateX(100px);
+                            border-radius: 5px;
+                        }
                     }
                 }
-            }
-            .about-title-wrapper{
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                margin-top: 50px;
-                .about-title{
-                    width: fit-content;
-                    h4{
-                        margin: 0;
-                        font-size: 50px;
-                        color: #fff;
-                        font-family: "Quicksand";
-                        opacity: 0;
-                    }
-                    .underline{
-                        height: 3px;
-                        background-color: #fff;
-                        width: 0px;
-                        transform: translateX(-30px);
-                        visibility: hidden;
+                .about-title-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 50px;
+                    .about-title{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h4{
+                            margin: 0;
+                            color: #fff;
+                            font-family: "Quicksand";
+                            opacity: 0;
+                        }
+                        .underline{
+                            height: 3px;
+                            background-color: #fff;
+                            width: 0px;
+                            visibility: hidden;
+                            transform: translateX( -5%);
+                        }
                     }
                 }
             }
