@@ -227,7 +227,6 @@ body{
         .home-wrapper{
             width: 100%;
             height: 690px;
-            border-bottom: #fff solid 2px;
             overflow: hidden;
             user-select: none;
             .stars{
@@ -393,6 +392,112 @@ body{
                 }
                 100%{
                     transform: translate(-50%, -50%) rotate(0deg) translateX(0px) translateY(0px);
+                }
+            }
+        }
+        .section-divider{
+            height: 20px;
+            width: 100%;
+        }
+        .about-wrapper{
+            width: 90%;
+            background-color: #0000005b;
+            border-radius: 5px;
+            margin: 5%;
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 1s ease;
+            .card-area{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .card-wrapper{
+                    width: 80%;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    display: grid;
+                    grid-template-columns: repeat(4, 22%);
+                    grid-template-rows: 40%;
+                    grid-column-gap: 3%;
+                    grid-row-gap: 0;
+                    .card-left{
+                        grid-row: 1;
+                        grid-column-start: span 2;
+                        min-height: 300px;
+                        background-color: #fff;
+                        opacity: 0;
+                        transform: translateX(-100px);
+                        border-radius: 5px;
+                    }
+                    .card-right{
+                        grid-column: 3/5;
+                        grid-row: 2;
+                        min-height: 300px;
+                        background-color: #fff;
+                        opacity: 0;
+                        transform: translateX(100px);
+                        border-radius: 5px;
+                    }
+                }
+            }
+            .about-title-wrapper{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-top: 50px;
+                .about-title{
+                    width: fit-content;
+                    h4{
+                        margin: 0;
+                        font-size: 50px;
+                        color: #fff;
+                        font-family: "Quicksand";
+                        opacity: 0;
+                    }
+                    .underline{
+                        height: 3px;
+                        background-color: #fff;
+                        width: 0px;
+                        transform: translateX(-30px);
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+        .about-wrapper.visible{
+            opacity: 1;
+            transition: opacity 1s ease .2s;
+            .card-area{
+                .card-wrapper{
+                    .card-left{
+                        transition: opacity 1s ease, transform .8s ease .3s;
+                        opacity: 1;
+                        transform: translateX(0px);
+                    }
+                    .card-right{
+                        transition: opacity 1s ease, transform .8s ease .5s;
+                        opacity: 1;
+                        transform: translateX(0px);
+                    }
+                }
+            }
+            .about-title-wrapper{
+                .about-title{
+                    h4{
+                        transition: opacity 1s ease, color 2s ease, transform 2s ease .4s;
+                        transform: scale(1.1);
+                        color:#9ee6fe;
+                        opacity: 1;
+                    }
+                    .underline{
+                        height: 3px;
+                        background-color: #9ee6fe;
+                        width: 110%;
+                        visibility: visible;
+                        transition: width 2s ease 1s, background-color 2s ease;
+                    }
                 }
             }
         }
