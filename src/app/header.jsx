@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function Header({isOpen, setIsOpen}){
+  const navTo =(sectionid)=>{
+    const section = document.getElementById(sectionid);
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
     return(
       <div className='header-wrapper'>
         <div className='header'>
@@ -16,19 +20,19 @@ export default function Header({isOpen, setIsOpen}){
             </div>
             <div className={`menu-wrapper ${isOpen ? "open" : "close"}`}>
               <div className='item-wrapper'>
-                <div className={`menu-item home ${isOpen ? "open" : "close"}`}>
+                <div className={`menu-item home ${isOpen ? "open" : "close"}`} onClick={()=>navTo('home-section')}>
                   <h4>HOME</h4>
                   <div className='underline'/>
                 </div>
-                <div className={`menu-item about ${isOpen ? "open" : "close"}`}>
+                <div className={`menu-item about ${isOpen ? "open" : "close"}`} onClick={()=>navTo('about-section')}>
                   <h4>ABOUT</h4>
                   <div className='underline'/>
                 </div>
-                <div className={`menu-item port ${isOpen ? "open" : "close"}`}>
+                <div className={`menu-item port ${isOpen ? "open" : "close"}`} onClick={()=>navTo('portfolio-section')}>
                   <h4>PORTFOLIO</h4>
                   <div className='underline'/>
                 </div>
-                <div className={`menu-item contact ${isOpen ? "open" : "close"}`}>
+                <div className={`menu-item contact ${isOpen ? "open" : "close"}`} onClick={()=>navTo('contact-section')}>
                   <h4>CONTACT</h4>
                   <div className='underline'/>
                 </div>

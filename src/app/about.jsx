@@ -14,7 +14,7 @@ export default function Aboutsection() {
         observer.observe(sectionRef.current)
     },[])
     return(
-        <div className="about-section">
+        <div className="about-section" id="about-section">
             <div ref={sectionRef} className={`about-wrapper ${isSectionVisible ? 'visible' : ''}`}>
                 <div className="about-title-wrapper">
                     <div className="about-title">

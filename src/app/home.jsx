@@ -20,7 +20,7 @@ export default function Homesection (){
     }
 
     return(
-        <div className='home-wrapper'>
+        <div className='home-wrapper' id="home-section">
           <div className='stars'>
             <div className='shifting-stars'>
               <div className='star'/>
