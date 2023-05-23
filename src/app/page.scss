@@ -1,6 +1,7 @@
 $small-screen: 480px;
 $medium-screen: 768px;
 $large-screen: 1024px;
+$super-large-screen: 1500px;
 @media (max-width: $small-screen){
     .about-title{
         font-size: 20px;
@@ -15,6 +16,9 @@ $large-screen: 1024px;
         h4{
             font-size: 15px;
         }
+    }
+    .home-wrapper{
+        height: 790px;
     }
 }
 @media (min-width: $small-screen) and (max-width: $medium-screen){
@@ -49,7 +53,7 @@ $large-screen: 1024px;
         }
     }
 }
-@media (min-width: $large-screen){
+@media (min-width: $large-screen) and (max-width: $super-large-screen){
     .about-title{
         font-size: 50px;
     }
@@ -64,7 +68,30 @@ $large-screen: 1024px;
             font-size: 30px;
         }
     }
+    .home-wrapper{
+        height: 690px;
+    }
 }
+@media (min-width: $super-large-screen){
+    .about-title{
+        font-size: 50px;
+    }
+    .header-left{
+        margin-top: 10px;
+        h4{
+            font-size: 30px;
+        }
+    }
+    .menu-item{
+        h4{
+            font-size: 30px;
+        }
+    }
+    .home-wrapper{
+        height: 990px;
+    }
+}
+
 body{
     margin: 0;
     background: url(http://salehriaz.com/404Page/img/bg_purple.png);
@@ -290,7 +317,6 @@ body{
         }
         .home-wrapper{
             width: 100%;
-            height: 690px;
             overflow: hidden;
             user-select: none;
             .stars{
