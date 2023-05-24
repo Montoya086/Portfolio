@@ -169,6 +169,7 @@ $super-large-screen: 1500px;
         }
         .card-right{
             grid-column: 3/5;
+            height: fit-content;
             .card-right-image{
                 width: 35%;
                 margin-left: 5%;
@@ -225,6 +226,7 @@ $super-large-screen: 1500px;
         }
         .card-right{
             grid-column: 3/5;
+            height: fit-content;
             .card-right-image{
                 width: 35%;
                 margin-left: 5%;
@@ -280,6 +282,7 @@ $super-large-screen: 1500px;
             }
         }
         .card-right{
+            height: fit-content;
             grid-column: 3/5;
             .card-right-image{
                 width: 35%;
