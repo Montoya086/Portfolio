@@ -821,11 +821,11 @@ body{
                         opacity: 1;
                         transform: translateX(0px);
                         .card-left-image{
-                            transition: opacity 2s ease 2s;
+                            transition: opacity 2s ease 1s;
                             opacity: 1;
                         }
                         .card-left-text{
-                            transition: opacity 2s ease 2.5s;
+                            transition: opacity 2s ease 1.5s;
                             opacity: 1;
                         }
                     }
@@ -834,11 +834,11 @@ body{
                         opacity: 1;
                         transform: translateX(0px);
                         .card-right-image{
-                            transition: opacity 2s ease 3.5s;
+                            transition: opacity 2s ease 2.5s;
                             opacity: 1;
                         }
                         .card-right-text{
-                            transition: opacity 2s ease 3s;
+                            transition: opacity 2s ease 2s;
                             opacity: 1;
                         }
                     }
