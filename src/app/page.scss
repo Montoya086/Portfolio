@@ -20,6 +20,48 @@ $super-large-screen: 1500px;
     .home-wrapper{
         height: 790px;
     }
+    .card-wrapper{
+        margin-top: 50px;
+        margin-bottom: 10px;
+        grid-row-gap: 3%;
+        .card{
+            flex-direction: column;
+            padding: 5px;
+        }
+        .card-left{
+            grid-column-start: span 3;
+            .card-left-image{
+                width: 45%;
+            }
+            .card-left-text{
+                width: 85%;
+                h4{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 8px;
+                }
+            }
+        }
+        .card-right{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            grid-column: 2/5;
+            .card-right-image{
+                width: 35%;
+            }
+            .card-right-text{
+                width: 85%;
+                h4{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
 }
 @media (min-width: $small-screen) and (max-width: $medium-screen){
     .about-title{
@@ -36,6 +78,51 @@ $super-large-screen: 1500px;
             font-size: 20px;
         }
     }
+    .home-wrapper{
+        height: 690px;
+    }
+    .card-wrapper{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        grid-row-gap: 3%;
+        .card{
+            flex-direction: column;
+            padding: 8px;
+            height: 300px;
+            border: #23252b 1px solid;
+        }
+        .card-left{
+            grid-column-start: span 3;
+            .card-left-image{
+                width: 45%;
+            }
+            .card-left-text{
+                width: 85%;
+                h4{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+        .card-right{
+            margin-top: 10%;
+            grid-column: 2/5;
+            .card-right-image{
+                width: 35%;
+            }
+            .card-right-text{
+                width: 85%;
+                h4{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
 @media (min-width: $medium-screen) and (max-width: $large-screen){
     .about-title{
@@ -50,6 +137,46 @@ $super-large-screen: 1500px;
     .menu-item{
         h4{
             font-size: 25px;
+        }
+    }
+    .home-wrapper{
+        height: 690px;
+    }
+    .card-wrapper{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        grid-column-gap: 3%;
+        .card{
+            flex-direction: row;
+            padding: 15px;
+        }
+        .card-left{
+            grid-column-start: span 2;
+            .card-left-image{
+                width: 35%;
+                margin-right: 5%;
+            }
+            .card-left-text{
+                width: 55%;
+                margin-left: 5%;
+                h4{
+                    font-size: 23px;
+                }
+            }
+        }
+        .card-right{
+            grid-column: 3/5;
+            .card-right-image{
+                width: 35%;
+                margin-left: 5%;
+            }
+            .card-right-text{
+                width: 55%;
+                margin-right: 5%;
+                h4{
+                    font-size: 23px;
+                }
+            }
         }
     }
 }
@@ -71,6 +198,43 @@ $super-large-screen: 1500px;
     .home-wrapper{
         height: 690px;
     }
+    .card-wrapper{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        grid-column-gap: 3%;
+        .card{
+            flex-direction: row;
+            padding: 25px;
+        }
+        .card-left{
+            grid-column-start: span 2;
+            .card-left-image{
+                width: 35%;
+                margin-right: 5%;
+            }
+            .card-left-text{
+                width: 55%;
+                margin-left: 5%;
+                h4{
+                    font-size: 23px;
+                }
+            }
+        }
+        .card-right{
+            grid-column: 3/5;
+            .card-right-image{
+                width: 35%;
+                margin-left: 5%;
+            }
+            .card-right-text{
+                width: 55%;
+                margin-right: 5%;
+                h4{
+                    font-size: 23px;
+                }
+            }
+        }
+    }
 }
 @media (min-width: $super-large-screen){
     .about-title{
@@ -89,6 +253,43 @@ $super-large-screen: 1500px;
     }
     .home-wrapper{
         height: 990px;
+    }
+    .card-wrapper{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        grid-column-gap: 3%;
+        .card{
+            flex-direction: row;
+            padding: 25px;
+        }
+        .card-left{
+            grid-column-start: span 2;
+            .card-left-image{
+                width: 35%;
+                margin-right: 5%;
+            }
+            .card-left-text{
+                width: 55%;
+                margin-left: 5%;
+                h4{
+                    font-size: 23px;
+                }
+            }
+        }
+        .card-right{
+            grid-column: 3/5;
+            .card-right-image{
+                width: 35%;
+                margin-left: 5%;
+            }
+            .card-right-text{
+                width: 55%;
+                margin-right: 5%;
+                h4{
+                    font-size: 23px;
+                }
+            }
+        }
     }
 }
 
@@ -509,32 +710,75 @@ body{
                     justify-content: center;
                     .card-wrapper{
                         width: 80%;
-                        margin-top: 50px;
-                        margin-bottom: 50px;
                         display: grid;
                         grid-template-columns: repeat(4, 22%);
                         grid-template-rows: 40%;
-                        grid-column-gap: 3%;
                         grid-row-gap: 0;
+                        .card{
+                            min-height: fit-content;
+                            background-color: #fff;
+                            opacity: 0;
+                            border-radius: 5px;
+                            display: flex;
+                            align-items: center;
+                            user-select: none;
+                            cursor: pointer;
+                            transition: transform 0.5s ease;
+                            overflow: hidden;
+                        }
+                        .card:hover{
+                            box-shadow: 3px 3px 4px #23252b;
+                            transform:scale(1.1);
+                            transition: transform 0.5s ease 0.2s;
+                        }
                         .card-left{
                             grid-row: 1;
-                            grid-column-start: span 2;
-                            min-height: 300px;
-                            max-height: fit-content;
-                            background-color: #fff;
-                            opacity: 0;
                             transform: translateX(-100px);
-                            border-radius: 5px;
+                            .card-left-image{
+                                position: relative;
+                                opacity: 0;
+                                img{
+                                    border-radius: 10px;
+                                    width: 100%;
+                                }
+                            }
+                            .card-left-text{
+                                opacity: 0;
+                                h4{
+                                    font-family: "Quicksand";
+                                    color: #23252b;
+                                    margin: 0;
+                                }
+                                p{
+                                    font-family: "Quicksand";
+                                    overflow-wrap: break-word;
+                                    text-align: justify;
+                                }
+                            }
                         }
                         .card-right{
-                            grid-column: 3/5;
-                            grid-row: 2;
-                            min-height: 300px;
-                            max-height: fit-content;
-                            background-color: #fff;
-                            opacity: 0;
                             transform: translateX(100px);
-                            border-radius: 5px;
+                            grid-row: 2;
+                            .card-right-image{
+                                opacity: 0;
+                                img{
+                                    border-radius: 10px;
+                                    width: 100%;
+                                }
+                            }
+                            .card-right-text{
+                                opacity: 0;
+                                h4{
+                                    font-family: "Quicksand";
+                                    color: #23252b;
+                                    margin: 0;
+                                }
+                                p{
+                                    font-family: "Quicksand";
+                                    overflow-wrap: break-word;
+                                    text-align: justify;
+                                }
+                            }
                         }
                     }
                 }
@@ -570,14 +814,30 @@ body{
             .card-area{
                 .card-wrapper{
                     .card-left{
-                        transition: opacity 1s ease, transform .8s ease .3s;
+                        transition: opacity 2s ease, transform .8s ease .3s;
                         opacity: 1;
                         transform: translateX(0px);
+                        .card-left-image{
+                            transition: opacity 2s ease 2s;
+                            opacity: 1;
+                        }
+                        .card-left-text{
+                            transition: opacity 2s ease 2.5s;
+                            opacity: 1;
+                        }
                     }
                     .card-right{
-                        transition: opacity 1s ease, transform .8s ease .5s;
+                        transition: opacity 2s ease, transform .8s ease .5s;
                         opacity: 1;
                         transform: translateX(0px);
+                        .card-right-image{
+                            transition: opacity 2s ease 3.5s;
+                            opacity: 1;
+                        }
+                        .card-right-text{
+                            transition: opacity 2s ease 3s;
+                            opacity: 1;
+                        }
                     }
                 }
             }
