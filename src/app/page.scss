@@ -48,6 +48,7 @@ $super-large-screen: 1500px;
             margin-top: 10%;
             margin-bottom: 10%;
             grid-column: 2/5;
+            margin-right: -20%;
             .card-right-image{
                 width: 35%;
             }
@@ -110,6 +111,7 @@ $super-large-screen: 1500px;
         .card-right{
             margin-top: 10%;
             grid-column: 2/5;
+            margin-right: -20%;
             .card-right-image{
                 width: 35%;
             }
