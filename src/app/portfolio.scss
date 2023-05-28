@@ -12,6 +12,7 @@ $super-large-screen: 1500px;
     .carousel {
         width: $card-size;
         height: $card-size;
+        right: 30px;
     }
     .portfolio-section{
         height: 400px;
@@ -42,6 +43,7 @@ $super-large-screen: 1500px;
     .carousel {
         width: $card-size;
         height: $card-size;
+        right: 35px;
     }
     .portfolio-section{
         height: 500px;
@@ -71,6 +73,7 @@ $super-large-screen: 1500px;
     .carousel {
         width: $card-size;
         height: $card-size;
+        right: 40px;
     }
     .portfolio-section{
         height: 600px;
@@ -100,6 +103,7 @@ $super-large-screen: 1500px;
     .carousel {
         width: $card-size;
         height: $card-size;
+        right: 45px;
     }
     .portfolio-section{
         height: 700px;
@@ -126,6 +130,7 @@ $super-large-screen: 1500px;
     .carousel {
         width: $card-size;
         height: $card-size;
+        right: 50px;
     }
     .portfolio-section{
         height: 700px;
@@ -166,6 +171,7 @@ $super-large-screen: 1500px;
     flex-direction: column;
     background-color: #0000005b;
     margin-bottom: 50px;
+    overflow: hidden;
     .portfolio-title{
         margin-bottom: 50px;
         h4{
