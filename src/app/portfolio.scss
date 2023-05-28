@@ -172,6 +172,7 @@ $super-large-screen: 1500px;
     background-color: #0000005b;
     margin-bottom: 50px;
     overflow: hidden;
+    opacity: 0;
     .portfolio-title{
         margin-bottom: 50px;
         h4{
@@ -190,6 +191,8 @@ $super-large-screen: 1500px;
     }
 }
 .portfolio-section.visible{
+    opacity: 1;
+    transition: opacity 1s ease;
     .portfolio-title{
         h4{
             transition: opacity 1s ease, color 2s ease, transform 2s ease .4s;
