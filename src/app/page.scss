@@ -480,25 +480,25 @@ body{
                         opacity: 1;
                         transform: translateX(-50px);
                         transition: opacity 1s ease, transform .8s ease;
-                        transition-delay: 0.5s;
+                        transition-delay: 0.3s;
                     }
                     .menu-item.about.open{
                         opacity: 1;
                         transform: translateX(-50px);
                         transition: opacity 1s ease, transform .8s ease;
-                        transition-delay: 0.6s;
+                        transition-delay: 0.4s;
                     }
                     .menu-item.port.open{
                         opacity: 1;
                         transform: translateX(-50px);
                         transition: opacity 1s ease, transform .8s ease;
-                        transition-delay: 0.7s;
+                        transition-delay: 0.5s;
                     }
                     .menu-item.contact.open{
                         opacity: 1;
                         transform: translateX(-50px);
                         transition: opacity 1s ease, transform .8s ease;
-                        transition-delay: 0.8s;
+                        transition-delay: 0.6s;
                     }
                 }
                 .menu-wrapper.close{

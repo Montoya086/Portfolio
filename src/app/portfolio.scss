@@ -1,0 +1,160 @@
+$color-purple: #8B5CF6;
+$color-pink: #EC4899;
+$color-gray: #9CA3AF;
+$color-black: #1F2937;
+$card-size: 23rem;
+@font-face {
+    font-family: "Quicksand";
+    src: local("Quicksand"),
+      url("../fonts/Quicksand.ttf") format("truetype");
+  }
+.section-divider-prortfolio{
+    height: 100px;
+}
+.portfolio-section{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    justify-content: center;
+    height: 700px;
+    flex-direction: column;
+    background-color: #0000005b;
+    margin-bottom: 50px;
+    .portfolio-title{
+        margin-bottom: 50px;
+        h4{
+            font-size: 50px;
+            color: white;
+            font-family: "Quicksand";
+            opacity: 0;
+            margin: 0px;
+        }
+        .underline{
+            height: 3px;
+            background-color: #fff;
+            width: 0px;
+            transition: width 2s ease, background-color 2s ease;
+            transform: translateX( -5%);
+        }
+    }
+}
+.portfolio-section.visible{
+    .portfolio-title{
+        h4{
+            transition: opacity 1s ease, color 2s ease, transform 2s ease .4s;
+            transform: scale(1.1);
+            color:#9ee6fe;
+            opacity: 1;
+        }
+        .underline{
+            height: 3px;
+            background-color: #9ee6fe;
+            width: 110%;
+            visibility: visible;
+            transition: width 2s ease 1s, background-color 2s ease;
+        }
+    }
+    .carousel{
+        transform: scale(1);
+        transition: transform 1s ease 0.5s, opacity 0.5s ease 0.5s;
+        opacity: 1;
+    }
+}
+.carousel {
+    position: relative;
+    width: $card-size;
+    height: $card-size;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    margin-bottom: 100px;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  
+  .card-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: 
+      rotateY(calc(var(--offset) * 50deg)) 
+      scaleY(calc(1 + var(--abs-offset) * -0.4))
+      translateZ(calc(var(--abs-offset) * -30rem))
+      translateX(calc(var(--direction) * -5rem));
+    filter: blur(calc(var(--abs-offset) * 1rem));
+    transition: all 0.3s ease-out;
+  }
+  
+  .card-carousel {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: hsl(280deg, 40%, calc(100% - var(--abs-offset) * 50%));
+    border-radius: 1rem;
+    color: $color-gray;
+    text-align: justify;
+    transition: all 0.3s ease-out;
+    
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0 0 0.7em;
+      color: $color-black;
+      font-family: "Quicksand";
+    }
+    
+    p, h2, h4{
+      transition: all 0.3s ease-out;
+      font-family: "Quicksand";
+      color: $color-black;
+    }
+
+    h4{
+        margin: 0;
+    }
+
+    .tecs{
+        margin: 0;
+    }
+
+    cursor: pointer;
+    .img{
+        width: 100%;
+        height: 55%;
+    }
+  }
+
+  .card-carousel:hover{
+    transform: scale(1.05);
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  .nav {
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+    background: unset;
+    border: unset;
+    
+    &.left {
+      transform: translateX(-100%) translatey(-50%);
+    }
+    
+    &.right {
+      right: 0;
+      transform: translateX(170%) translatey(-50%);
+    }
+  }
