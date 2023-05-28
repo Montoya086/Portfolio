@@ -3,6 +3,144 @@ $color-pink: #EC4899;
 $color-gray: #9CA3AF;
 $color-black: #1F2937;
 $card-size: 23rem;
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$super-large-screen: 1500px;
+@media (max-width: $small-screen){
+    $card-size: 7rem;
+    .carousel {
+        width: $card-size;
+        height: $card-size;
+    }
+    .portfolio-section{
+        height: 400px;
+        .card-carousel{
+            h2{
+                font-size: 12px;
+            }
+            h4{
+                font-size: 9px;
+            }
+            p{
+                font-size: 9px;
+                margin: 0;
+            }
+        }
+        .card-carousel>*{
+            transform: translateY(-20px);
+        }
+        .portfolio-title{
+            h4{
+                font-size:20px;
+            }
+        }
+    }
+}
+@media (min-width: $small-screen) and (max-width: $medium-screen){
+    $card-size: 12rem;
+    .carousel {
+        width: $card-size;
+        height: $card-size;
+    }
+    .portfolio-section{
+        height: 500px;
+        .card-carousel{
+            h2{
+                font-size: 20px;
+            }
+            h4{
+                font-size: 10px;
+            }
+            p{
+                font-size: 10px;
+            }
+        }
+        .portfolio-title{
+            h4{
+                font-size:30px;
+            }
+        }
+    }
+}
+@media (min-width: $medium-screen) and (max-width: $large-screen){
+    $card-size: 18rem;
+    .carousel {
+        width: $card-size;
+        height: $card-size;
+    }
+    .portfolio-section{
+        height: 600px;
+        .card-carousel{
+            h2{
+                font-size: 25px;
+            }
+            h4{
+                font-size: 13px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+        .portfolio-title{
+            h4{
+                font-size:40px;
+            }
+        }
+    }
+}
+@media (min-width: $large-screen) and (max-width: $super-large-screen){
+    $card-size: 23rem;
+    .carousel {
+        width: $card-size;
+        height: $card-size;
+    }
+    .portfolio-section{
+        height: 700px;
+        .card-carousel{
+            h2{
+                font-size: 30px;
+            }
+            h4{
+                font-size: 16px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .portfolio-title{
+            h4{
+                font-size:50px;
+            }
+        }
+    }
+}
+@media (min-width: $super-large-screen){
+    $card-size: 23rem;
+    .carousel {
+        width: $card-size;
+        height: $card-size;
+    }
+    .portfolio-section{
+        height: 700px;
+        .card-carousel{
+            h2{
+                font-size: 16px;
+            }
+            h4{
+                font-size: 10px;
+            }
+            p{
+                font-size: 10px;
+            }
+        }
+        .portfolio-title{
+            h4{
+                font-size:50px;
+            }
+        }
+    }
+}
 @font-face {
     font-family: "Quicksand";
     src: local("Quicksand"),
@@ -19,14 +157,12 @@ $card-size: 23rem;
     margin-right: 5%;
     border-radius: 5px;
     justify-content: center;
-    height: 700px;
     flex-direction: column;
     background-color: #0000005b;
     margin-bottom: 50px;
     .portfolio-title{
         margin-bottom: 50px;
         h4{
-            font-size: 50px;
             color: white;
             font-family: "Quicksand";
             opacity: 0;
@@ -65,8 +201,6 @@ $card-size: 23rem;
 }
 .carousel {
     position: relative;
-    width: $card-size;
-    height: $card-size;
     perspective: 500px;
     transform-style: preserve-3d;
     margin-bottom: 100px;
@@ -99,7 +233,6 @@ $card-size: 23rem;
     
     h2 {
       text-align: center;
-      font-size: 2rem;
       font-weight: bold;
       margin: 0 0 0.7em;
       color: $color-black;
@@ -137,8 +270,8 @@ $card-size: 23rem;
   
   .nav {
     color: black;
-    font-size: 5rem;
     position: absolute;
+    font-size: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
