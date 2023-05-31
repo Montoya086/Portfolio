@@ -23,6 +23,15 @@ export default function Contact(){
         <div className={`contact-section ${isSection3Visible ? 'visible' : ''}`} id="contact-section" ref={section3Ref}>
             <div className="stars"/>
             <div className="contact-wrapper">
+                <div className="contact-title-area">
+                    <div className="contact-title">
+                        <h4>
+                            ¡Let's make contact!
+                        </h4>
+                        <div className="underline"/>
+                    </div>
+                    <img className="astronaut-image" src="http://salehriaz.com/404Page/img/astronaut.svg" alt=''/>
+                </div>
                 <div className="contact-area">
                     <ContactCard img={gmail} text="mon21552@uvg.edu.gt"/>
                     <ContactCard img={github} text="/Montoya086" href="https://github.com/Montoya086"/>

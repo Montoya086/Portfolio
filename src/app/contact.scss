@@ -1,12 +1,126 @@
+$card-size: 23rem;
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$super-large-screen: 1500px;
 @font-face {
     font-family: "Quicksand";
     src: local("Quicksand"),
       url("../fonts/Quicksand.ttf") format("truetype");
 }
+@media (max-width: $small-screen){
+    .contact-card{
+        width: 75px;
+        height: 75px;
+    }
+    .contact-section{
+        height: 500px;
+        .astronaut-image{
+            width: 50px;
+        }
+    }
+    .contact-title{
+        h4{
+            font-size:20px;
+        }
+    }
+    .front{
+        p{
+            font-size: 6px;
+        }
+    }
+}
+@media (min-width: $small-screen) and (max-width: $medium-screen){
+    .contact-card{
+        width: 100px;
+        height: 100px;
+    }
+    .contact-section{
+        height: 600px;
+        .astronaut-image{
+            width: 80px;
+        }
+    }
+    .contact-title{
+        h4{
+            font-size:30px;
+        }
+    }
+    .front{
+        p{
+            font-size: 8px;
+        }
+    }
+}
+@media (min-width: $medium-screen) and (max-width: $large-screen){
+    .contact-card{
+        width: 150px;
+        height: 150px;
+    }
+    .contact-section{
+        height: 700px;
+        .astronaut-image{
+            width: 100px;
+        }
+    }
+    .contact-title{
+        h4{
+            font-size:40px;
+        }
+    }
+    .front{
+        p{
+            font-size: 12px;
+        }
+    }
+}
+@media (min-width: $large-screen) and (max-width: $super-large-screen){
+    .contact-card{
+        width: 200px;
+        height: 200px;
+    }
+    .contact-section{
+        height: 800px;
+        .astronaut-image{
+            width: 120px;
+        }
+    }
+    .contact-title{
+        h4{
+            font-size:50px;
+        }
+    }
+    .front{
+        p{
+            font-size: 15px;
+        }
+    }
+}
+@media (min-width: $super-large-screen){
+    .contact-card{
+        width: 200px;
+        height: 200px;
+    }
+    .contact-section{
+        height: 800px;
+        .astronaut-image{
+            width: 120px;
+        }
+    }
+    .contact-title{
+        h4{
+            font-size:50px;
+        }
+    }
+    .front{
+        p{
+            font-size: 15px;
+        }
+    }
+}
 .contact-section{
     user-select: none;
     padding: 0;
-    height: 800px;
     background: url(http://salehriaz.com/404Page/img/overlay_stars.svg), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     .contact-wrapper{
         width: 100%;
@@ -15,7 +129,8 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        z-index: 100;
+        flex-direction: column;
+        z-index: 99;
         .contact-area{
             height: fit-content;
             width: 70%;
@@ -23,10 +138,11 @@
             display: grid;
             grid-template-columns: repeat(3, 30%);
             column-gap: 5%;
+            a{
+                opacity: 0;
+            }
             .contact-card{
                 position: relative;
-                width: 200px;
-                height: 200px;
                 perspective: 1000px;
                 cursor: pointer;
                 .front,.back {
@@ -66,6 +182,62 @@
                 }
             }
         }
+        .contact-title{
+            margin-bottom: 10%;
+            h4{
+                color: white;
+                font-family: "Quicksand";
+                opacity: 0;
+                margin: 0px;
+            }
+            .underline{
+                height: 3px;
+                background-color: #fff;
+                width: 0px;
+                transition: width 2s ease, background-color 2s ease;
+                transform: translateX( -5%);
+            }
+        }
+        .contact-title-area{
+            display: flex;
+            .astronaut-image{
+                transform: rotateZ(45deg) translateX(20px) translateY(-50px);
+                opacity: 0;
+            }
+        }
+    }
+}
+.contact-section.visible{
+    .contact-title{
+        h4{
+            transition: opacity 1s ease, color 2s ease, transform 2s ease .4s;
+            transform: scale(1.1);
+            color:#9ee6fe;
+            opacity: 1;
+        }
+        .underline{
+            height: 3px;
+            background-color: #9ee6fe;
+            width: 110%;
+            visibility: visible;
+            transition: width 2s ease 1s, background-color 2s ease;
+        }
+    }
+    .contact-area a:nth-child(1){
+        transition: opacity 0.7s ease 0.5s;
+        opacity: 1;
+    }
+    .contact-area a:nth-child(2){
+        transition: opacity 0.7s ease 0.7s;
+        opacity: 1;
+    }
+    .contact-area a:nth-child(3){
+        transition: opacity 0.7s ease 0.9s;
+        opacity: 1;
+    }
+    .astronaut-image{
+        transition: opacity 0.7s ease 0.9s;
+        opacity: 1 !important;
     }
 }
 .alert-message{
@@ -80,9 +252,11 @@
     position: fixed;
     bottom: 5%;
     left: 45%;
+    z-index: 100;
     p{
         color: black;
         margin: 0px;
+        font-family: "Quicksand";
     }
 }
 .alert-message.visible{
