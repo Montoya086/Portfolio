@@ -5,10 +5,14 @@ export default function Header({isOpen, setIsOpen}){
     const section = document.getElementById(sectionid);
     section.scrollIntoView({ behavior: 'smooth' });
   }
+  const handleHome =()=>{
+    const section = document.getElementById("home-section");
+    section.scrollIntoView({ behavior: 'smooth' });
+  } 
     return(
       <div className='header-wrapper'>
         <div className='header'>
-          <div className='header-left'>
+          <div className='header-left' onClick={handleHome}>
             <h4>Montoya's Portfolio</h4>
             <div className='underline'/>
           </div>
