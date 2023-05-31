@@ -16,7 +16,6 @@ export default function Portfolio ({children}){
             const entry = entries[0]
             if(entry.isIntersecting){
                 setIsSection2Visible(true)
-                console.log("si")
             }
         })
         observer2.observe(section2Ref.current)

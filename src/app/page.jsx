@@ -1,6 +1,7 @@
 "use client"
 import './page.scss'
 import './portfolio.scss'
+import './contact.scss'
 import { useState } from 'react'
 import Header from './header.jsx'
 import Homesection from './home'
@@ -12,6 +13,7 @@ import medicareimg from './carousel_images/medicare.png'
 import crunchyimg from './carousel_images/crunchy.png'
 import blissimg from './carousel_images/bliss.png'
 import memoryimg from './carousel_images/memory.png'
+import Contact from './contact'
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
@@ -57,6 +59,8 @@ export default function Home() {
             tecs="React.js"
           />
         </Portfolio>
+        <div className='section-divider'/>
+        <Contact/>
       </div>
     </div>
   )
