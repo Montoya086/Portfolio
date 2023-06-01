@@ -16,8 +16,8 @@ Podrás ver este portafolio [aquí](https://proyecto3-web-seven.vercel.app)
 En este repositorio podrá encontrar los siguientes directorios:<br>
 |--Public<br>
 |--src <br>
-&nbsp;&nbsp;&nbsp;|--fonts
-&nbsp;&nbsp;&nbsp;|--app
+&nbsp;&nbsp;&nbsp;|--fonts <br>
+&nbsp;&nbsp;&nbsp;|--app <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--card_images<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--carousel_images<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--components<br>
