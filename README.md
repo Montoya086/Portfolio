@@ -9,24 +9,22 @@ Podrás ver este portafolio [aquí](https://proyecto3-web-seven.vercel.app)
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" width="30px"> [React](https://es.react.dev)
 - <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png" width="30px"> [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
 - <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sass-1-logo.png" width="30px"> [Sass](https://sass-lang.com)
-- <img src="https://media.graphassets.com/VKHHNvEETYqZRkqgjybc"> [Next.js](https://nextjs.org)
+- <img src="https://media.graphassets.com/VKHHNvEETYqZRkqgjybc" width="30px"> [Next.js](https://nextjs.org)
 - <img src="https://images.ctfassets.net/c63hsprlvlya/7otp3Ofpdr8sCedYnSewGn/da3393cae2fdc7f3cedca1f0c1b46fc1/logo-vercel-svgrepo-com.svg" width="30px"> [Vercel](https://vercel.com)
 
 ## Estructura
 En este repositorio podrá encontrar los siguientes directorios:<br>
 |--Public<br>
 |--src <br>
-&nbsp;&nbsp;&nbsp;|--config<br>
-&nbsp;&nbsp;&nbsp;|--images<br>
-&nbsp;&nbsp;&nbsp;|--pages<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--samples<br>
+&nbsp;&nbsp;&nbsp;|--fonts
+&nbsp;&nbsp;&nbsp;|--app
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--card_images<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--carousel_images<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--components<br>
 
 - En el directorio Public, podrá encontrar parte de la metadata de la página, así como iconos y logos.
 - En src podrá encontrar todos los elementos del proyecto.
-  - En la carpeta config podrá encontrar la configuración de la API utilizada para la recolección de datos de [Supabase](https://supabase.com) utilizando las variables de entorno.
-  - En la carpeta images podrá encontrar los logos e imagenes utilizadas dentro del proyecto
-  - En la carpeta pages podrá encontrar los componentes que representan las ventanas navegables
-    - En la carpeta samples podrá encontrar los componentes utilizados en las ventanas
+  - En la carpeta components podrá encontrar los componentes repetitivos
 
 ## ¿Cómo puedo usar la aplicación?
 Para poder utilizar la aplicación es necesario clonar el repositorio y en la carpeta raiz ejecutar
