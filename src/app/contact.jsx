@@ -33,7 +33,7 @@ export default function Contact(){
                     <img className="astronaut-image" src="http://salehriaz.com/404Page/img/astronaut.svg" alt=''/>
                 </div>
                 <div className="contact-area">
-                    <ContactCard img={gmail} text="mon21552@uvg.edu.gt"/>
+                    <ContactCard img={gmail} text="montoyaw1@gmail.com"/>
                     <ContactCard img={github} text="/Montoya086" href="https://github.com/Montoya086"/>
                     <ContactCard img={instagram} text="@amonty_086" href="https://www.instagram.com/amonty_086/"/>
                 </div>
