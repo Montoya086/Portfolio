@@ -49,7 +49,7 @@ export default function Home() {
           <Card title="Bliss"
             content={blissimg}
             desc="A catalog organizer and shopping app that's still on progress..."
-            href="https://bliss-57wr0jp78-franzcastillo.vercel.app"
+            href="https://bliss-three.vercel.app/"
             tecs="React.js"
           />
           <Card title="Memory game"
